@@ -43,9 +43,27 @@ form.addEventListener('submit', async (e) => {
     }
 })
 
+const resetForm = () => {
+    select('#title').value = ''
+    select('#content').value = ''
+    select('#thumbnail').value =null
+    select('#category').value ='0'
+    select('#feature-content').checked =false
+}
+
 const postData = async(data) => {
-    await fetch('http://localhost:3000/api/create', {
+    const result = await fetch('http://localhost:3000/api/create', {
         method: 'POST',
         body: data,
     })
+    if(result.ok){
+        const response = await result.json()
+        if(response.success){
+            displayMessage(response.message, 'green')
+            resetForm()
+        }
+        if(!response.success){
+            displayMessage(response.message, 'red')
+        }
+    }
 }

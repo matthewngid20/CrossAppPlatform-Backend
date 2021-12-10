@@ -12,5 +12,20 @@
     "category": "tech",
     "id": "1639125373702",
     "thumbnail": "http://localhost:3000/1639125373702-icon.png"
+  },
+  {
+    "title": "dsa",
+    "content": "dsa",
+    "category": "tech",
+    "id": "1639176176851",
+    "thumbnail": "http://localhost:3000/1639176176851-images-(6).jpeg"
+  },
+  {
+    "title": "test",
+    "content": "tester",
+    "category": "tech",
+    "featured": "on",
+    "id": "1639178365141",
+    "thumbnail": "http://localhost:3000/1639178365141-images-(6).jpeg"
   }
 ]
