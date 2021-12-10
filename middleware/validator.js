@@ -1,7 +1,7 @@
 //express validator 
 const {check, validationResult} = require('express-validator')
 
-const acceptedCategory = ['entertainment', 'political', 'tech']
+const acceptedCategory = ['entertainment', 'political', 'tech','breaking-news']
 const validator = [
     check('title').trim().not().isEmpty().withMessage('Title is required'),
     check('content').trim().not().isEmpty().withMessage('Body must have content'), 
