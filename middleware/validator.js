@@ -18,8 +18,22 @@ const result = (req, res, next) => {
     }
     next()
 }
+const validateFile = (req, res, next) => {
+    const exceptedFileType = ['png', 'jpg', 'jpeg'];
+    if (!req.file) {
+      return res.json({ success: false, message: 'Image is required!' });
+    }
+  
+    const fileExtension = req.file.mimetype.split('/').pop();
+    if (!exceptedFileType.includes(fileExtension)) {
+      return res.json({ success: false, message: 'Image file is not valid!' });
+    }
+  
+    next();
+  };
 
 module.exports = {
     validator, 
-    result
+    result,
+    validateFile
 }
