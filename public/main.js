@@ -44,7 +44,7 @@ form.addEventListener('submit', async (e) => {
 })
 
 const postData = async(data) => {
-    await fetch('http://localhost:7777/api/create', {
+    await fetch('http://localhost:3000/api/create', {
         method: 'POST',
         body: data,
     })

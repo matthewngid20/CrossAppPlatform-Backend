@@ -5,5 +5,12 @@
     "category": "tech",
     "id": "1639122430210",
     "thumbnail": "http://localhost:3000/1639122430210-images-(6).jpeg"
+  },
+  {
+    "title": "Title test",
+    "content": "Content test",
+    "category": "tech",
+    "id": "1639125373702",
+    "thumbnail": "http://localhost:3000/1639125373702-icon.png"
   }
 ]

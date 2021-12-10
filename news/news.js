@@ -24,7 +24,7 @@ class News {
     async create(data,id,imageName) {
         //read file  
         const totalData = await this.getAll()
-        totalData.push({...data, id, thumbnail: `http://localhost:7777/${imageName}`})
+        totalData.push({...data, id, thumbnail: `http://localhost:3000/${imageName}`})
         //
         await fs.promises.writeFile(this.path, JSON.stringify(totalData, null, 2))
     }

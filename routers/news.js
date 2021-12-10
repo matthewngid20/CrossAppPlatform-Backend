@@ -4,7 +4,6 @@ const multer = require('multer')
 const fs = require('fs')
 //image resize module
 const sharp = require('sharp')
-
 const uploads = require('../middleware/multer')
 const { createNews } = require('../controller/news')
 
