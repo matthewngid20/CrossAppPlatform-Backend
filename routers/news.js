@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const multer = require('multer')
-const fs = require('fs')
 //image resize module
-const sharp = require('sharp')
 const uploads = require('../middleware/multer')
 const { createNews } = require('../controller/news')
+//express validator 
+const {check, validationResukt} = require('express-validator')
+
 
 
 //get id from news
