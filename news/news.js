@@ -47,6 +47,16 @@ class News {
         const data = await this.getAll()
         return data.filter(news => news.category === category)
     }
+    async searchPosts(query) {
+        try {
+          const data = await this.getAll();
+          return data.filter(news =>
+            news.title.toLowerCase().includes(query.toLowerCase())
+          );
+        } catch (error) {
+          console.log('Error while searching post.');
+        }
+      }
 
 
 }

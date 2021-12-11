@@ -9,5 +9,5 @@ app.use('/api',newsRouter)
 
 
 app.listen(3000, () => {
-    console.log('port is listening');
+    console.log('port 3000 is listening');
 })
