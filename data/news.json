@@ -6,7 +6,7 @@
     "featured": "on",
     "id": "1639180131913",
     "desc": "It is a long established fact that a reader will be distracted by the ...",
-    "thumbnail": "http://localhost:3000/1639180131913-icon.png"
+    "thumbnail": "http://192.168.1.100:3000/1639180131913-icon.png"
   },
   {
     "title": "testing long content",
@@ -15,6 +15,6 @@
     "featured": "on",
     "id": "1639180131913",
     "desc": "It is a long established fact that a reader will be distracted by the ...",
-    "thumbnail": "http://localhost:3000/1639180131913-icon.png"
+    "thumbnail": "http://192.168.1.100:3000/1639180131913-icon.png"
   }
 ]

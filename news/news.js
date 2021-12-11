@@ -27,7 +27,7 @@ class News {
         //shorten version of content
         const { content } = data
         const desc = content.substr(0, 70) + '...'
-        totalData.push({ ...data, id, desc, thumbnail: `http://localhost:3000/${imageName}` })
+        totalData.push({ ...data, id, desc, thumbnail: `http://192.168.1.100:3000/${imageName}` })
         //
         await fs.promises.writeFile(this.path, JSON.stringify(totalData, null, 2))
     }
