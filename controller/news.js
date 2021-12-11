@@ -36,8 +36,21 @@ const getSingleNews = async (req, res) => {
         console.log("error inside getSingleNews controller", error.message);
     }
 }
+const getNewsByCategory = async (req, res) => {
+    try {
+        const data = await news.getByCategory(req.params.category)
+        if (!data) {
+            return res.json({ success: false, message: 'No post found!' })
+        } 
+        res.json({ success: true, news: data })
+    } catch (error) {
+        res.json({ success: false, news: data })
+        console.log("error inside getNewsByCategory controller", error.message);
+    }
+}
 module.exports = {
     createNews,
     getAllNews,
-    getSingleNews
+    getSingleNews,
+    getNewsByCategory
 }

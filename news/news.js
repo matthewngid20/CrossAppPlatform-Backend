@@ -23,7 +23,7 @@ class News {
 
     async create(data, id, imageName) {
         //read file  
-        const totalData = await this.getAll()
+        const totalData = JSON.parse(await fs.promises.readFile(this.path))
         //shorten version of content
         const { content } = data
         const desc = content.substr(0, 70) + '...'
@@ -44,7 +44,7 @@ class News {
     }
 
     async getByCategory(category) {
-        const data = JSON.parse(await fs.promises.readFile(this.path))
+        const data = await this.getAll()
         return data.filter(news => news.category === category)
     }
 
